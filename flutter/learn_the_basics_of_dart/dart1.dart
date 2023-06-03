@@ -6,6 +6,8 @@ void main() async {
   /*print imprime en pantalla al igual que python, el metodo de montecarlo es un metodo para aproximar expresiones matematicas
   complejas y costosas de evaluar*/
   print('Compute π using the Monte Carlo method.');
+  /*la final keyword se usa para restringir al usuario, se puede usar en muchos contextos
+como variables, clases y metodos, en variables es una keyword que sirve para definirles como var por ej*/
   await for (final estimate in computePi().take(100)) {
     print('π ≅ $estimate');
   }
