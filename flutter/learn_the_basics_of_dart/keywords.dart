@@ -1,29 +1,16 @@
 abstract
 /*
 LAS ABSTRACT CLASES SE USAN PARA TIPAR LAS CLASES COMUNES, DESPUES HACES UNA CLASE COMUN
-EXTENDIENDO LA ABSTRACTA Y YA TENES LAS FUNCIONES TIPADOS, DESPUES LAS SOBREESCRIBIS Y IMPLEMENTAS EL CODIGO
-DE DICHAS FUNCIONES
-An Abstract class in Dart is defined as those classes which contain one or more than one abstract 
-method
-An Abstract class in Dart is defined as those classes which contain one or more than one abstract 
-method
-An abstract class cannot be instantiated but they can be sub-classed.
+EXTENDIENDO LA ABSTRACTA Y YA TENES LAS FUNCIONES TIPADAS, DESPUES LAS SOBREESCRIBIS Y IMPLEMENTAS EL 
+CODIGO DE DICHAS FUNCIONES, ESTOS METODOS DENTRO DE FUNCIONES ABSTRACTAS SE LLAMAN METODOS ABSRACTOS
+Y SOLO TIENEN SU NOMBRE DEFINIDO, LAS CLASES ABSTRACTAS NO PUEDEN SER INSTANCIADAS
 
-abstract class class_name {
-  // Body of abstract class
-}
+PARA QUE UNA CLASE SEA ABSTRACTA SOLO BASTA CON USAR LA KEYWORD abstract, PERO SI DEFINIS UNA CLASE
+COMUN Y LE PONES 1 METODO ABSTRACTACTO SI O SI TENES QUE INDICAR QUE LA CLASE ES abstract
 
-Abstract Methods
-Abstract methods can only exist within an abstract class.
-To make a method abstract, use a semicolon (;) instead of the method body.
-
-void talk (); // Abstract method
-void walk (); // Abstract method
-
-Normal classes can extend the abstract class, but they have to override every abstract method.
-You can also create normal methods in the abstract class. And to override normal method is not mandatory.
-The abstract class will only complain when you don’t override the abstract method.
-
+SI UNA CLASS COMUN EXTIENDE UNA CLASS ABSTRACTA TIENE QUE DEFINIR TODOS LOS METODOS ABSTRACTOS
+TAMBIEN PODES HACER METODOS NORMALES EN LA ABSTRACT CLASS Y ES OPCIONAL DEFINIRLOS CUANDO LOS EXTENDES
+*/
 abstract class Person{
 void walk();  //Abstract Method
   void talk();  //Abstract Method
@@ -44,35 +31,15 @@ jay.talk();
   jay.walk();
 }
 
-Output
-Jay can talk
-Jay can walk
- */
-else if true false
-/*
-if(condition1){
-    return true
-} else if(condition2){
-    return true //Condition2
-} else {
-    return false
-}
-
-if (pair case [int x, int y]) return Point(x, y);
-SI LA VARIABLE pair CUMPLE CON EL PATRON DE SER UN ARRAY CON DOS NUMEROS ENTEROS
-if (pair case [int x, int y]) {
-  print('Was coordinate array $x,$y');
-} else {
-  throw FormatException('Invalid coordinates.');
-}
- */
 import as show hide deferred library
 /*
 importas librerias
 import 'dart:html';
 
-If you import two libraries that have conflicting identifiers, then you can specify a prefix for one or both libraries. For example, if library1 and library2 both have an Element class, then you might have code like this:
-
+If you import two libraries that have conflicting identifiers, then you can specify a prefix for one 
+or both libraries. For example, if library1 and library2 both have an Element class, then you might 
+have code like this:
+*/
 import 'package:lib1/lib1.dart';
 import 'package:lib2/lib2.dart' as lib2;
 
@@ -81,8 +48,7 @@ Element element1 = Element();
 
 // Uses Element from lib2.
 lib2.Element element2 = lib2.Element();
-
-If you want to use only part of a library, you can selectively import the library. For example:
+//If you want to use only part of a library, you can selectively import the library. For example:
 
 // Import only foo.
 import 'package:lib1/lib1.dart' show foo;
@@ -90,28 +56,29 @@ import 'package:lib1/lib1.dart' show foo;
 // Import all names EXCEPT foo.
 import 'package:lib2/lib2.dart' hide foo;
 
-To lazily load a library, you must first import it using deferred as.
+//To lazily load a library, you must first import it using deferred as.
 
 import 'package:greetings/hello.dart' deferred as hello;
 
-When you need the library, invoke loadLibrary() using the library’s identifier.
+//When you need the library, invoke loadLibrary() using the library’s identifier.
 
 Future<void> greet() async {
   await hello.loadLibrary();
   hello.printGreeting();
 }
-
+/* 
 To specify library-level doc comments or metadata annotations, attach them to a library declaration 
 at the start of the file.
-
+*/
 /// A really great test library.
 @TestOn('browser')
 library;
- */
+
+
 super
 /*
 Use extends to create a subclass, and super to refer to the superclass:
-
+*/
 class Television {
   void turnOn() {
     _illuminateDisplay();
@@ -129,7 +96,6 @@ class SmartTelevision extends Television {
   }
   // ···
 }
-*/
 
 final const static 
 /*
@@ -138,33 +104,29 @@ a type. A final variable can be set only once; a const variable is a compile-tim
 (Const variables are implicitly final.)
 
 Here’s an example of creating and setting a final variable:
-
+*/
 final name = 'Bob'; // Without a type annotation
 final String nickname = 'Bobby';
-You can’t change the value of a final variable:
+//You can’t change the value of a final variable:
 
 name = 'Alice'; // Error: a final variable can only be set once.
-
+/*
 A compile-time constant is computed at the time the code is compiled, while a run-time constant can 
 only be computed while the application is running, las variables compile-time sirven para tipar
 
-final means that this variable will not be assigned again. const means that the following object can 
-and will be instantiated before the program is run.
+compilar es el proceso de convertir codigo dart a lenguaje maquina(binario)
 
 Use const for variables that you want to be compile-time constants. If the const variable is at the 
 class level, mark it static const. Where you declare the variable, set the value to a compile-time 
 constant such as a number or string literal, a const variable, or the result of an arithmetic 
 operation on constant numbers:
-
+*/
 const bar = 1000000; // Unit of pressure (dynes/cm2)
 const double atm = 1.01325 * bar; // Standard atmosphere
-
+/*
 Use the static keyword to implement class-wide variables and methods.
 es para hacer una variable global en una clase en caso que se repita en varios metodos
-
-Static variables
-Static variables (class variables) are useful for class-wide state and constants:
-
+*/
 class Queue {
   static const initialCapacity = 16;
   // ···
@@ -173,20 +135,20 @@ class Queue {
 void main() {
   assert(Queue.initialCapacity == 16);
 }
-
+/*
 Static methods
-Static methods (class methods) don’t operate on an instance, and thus don’t have access to this. 
+Static methods (class methods) no funcionan en una nueva instancia, and thus don’t have access to this. 
 They do, however, have access to static variables. As the following example shows, you invoke static 
 methods directly on a class:
-
+*/
 import 'dart:math';
 
 class Point {
-  double x, y; se declaran variables double x y
+  double x, y; //se declaran variables double x y
   Point(this.x, this.y);
 
-  static double distanceBetween(Point a, Point b) {funcion estatica que retorna
-  un type double
+  static double distanceBetween(Point a, Point b) {
+    //funcion estatica que retorna un type double
     var dx = a.x - b.x;
     var dy = a.y - b.y;
     return sqrt(dx * dx + dy * dy);
@@ -194,49 +156,43 @@ class Point {
 }
 
 void main() {
-  var a = Point(2, 2); x = 2 y =2
-  var b = Point(4, 4); x = 4 y = 4
-  var distance = Point.distanceBetween(a, b); 
-    dx = a.x(2) - b.x(4) = -2
-    dy = a.y(2) - b.y(4) = -2
-    return sqrt(-2 * -2 + -2 * -2) = sqrt(4 + 4) = sqrt(8) = 2.82 aprox
-  assert(2.8 < distance && distance < 2.9); true, si fuera false retorna mensaje de error
+  var a = Point(2, 2); //x = 2 y =2
+  var b = Point(4, 4); //x = 4 y = 4
+  var distance = Point.distanceBetween(a, b);//los metodos estaticos solo pueden invocarse asi
+    dx = a.x - b.x //(2) - (4) = -2
+    dy = a.y - b.y //(2) - (4) = -2
+    return sqrt(dx * dx + dy * dy) //= sqrt(4 + 4) = sqrt(8) = 2.82 aprox
+  assert(2.8 < distance && distance < 2.9); //true, si fuera false retorna mensaje de error
   print(distance);
 }
-
-You can use static methods as compile-time constants. For example, you can pass a static method as a 
-parameter to a constant constructor.
+/*
+You can use static methods as compile-time constants(osea usarlos para tipar). For example, you can 
+pass a static method as a parameter to a constant constructor.
 
 You can define constants that use type checks and casts (is and as), collection if, and spread 
 operators (... and ...?):
-
+*/
 const Object i = 3; // Where i is a const Object with an int value...
 const list = [i as int]; // Use a typecast.
 const map = {if (i is int) i: 'int'}; // Use is and collection if.
 const set = {if (list is List<int>) ...list}; // ...and a spread.
-
+/*
 USO DE FINAL KEYWORD EN CLASES
 To close the type hierarchy, use the final modifier. This prevents subtyping from a class outside of 
 the current library Disallowing both inheritance and implementation prevents subtyping entirely. 
 This guarantees:
-
 You can safely add incremental changes to the API.
 You can call instance methods knowing that they haven’t been overwritten in a third-party subclass.
 
-In programming language theory, subtyping (also subtype polymorphism or inclusion polymorphism) is a 
-form of type polymorphism in which a subtype is a datatype that is related to another datatype 
-(the supertype) by some notion of substitutability, meaning that program elements, typically 
-subroutines or functions, written to operate on elements of the supertype can also operate on 
-elements of the subtype. If S is a subtype of T, the subtyping relation 
-(written as S <: T,  S ⊑ T,[1] or  S ≤: T ) means that any term of type S can safely be used in any 
-context where a term of type T is expected
+PARA CERRAR EL ARBOL GENEALOGICO DE TIPADO USA EL final KEYWORD, ESTO EVITA EL SUBTIPADO Y DESHABILITA
+LA IMPLEMENTACION Y LA HERENCIA EN LIBRERIAS EXTERNAS
 
 OSEA QUE SI DEFINO UNA CLASE CON FINAL ESTA CLASE SOLO PODRA SER EXTENDIDA POR CLASES QUE FORMEN
 PARTE DE SU LIBRERIA
 
 Final classes can be extended or implemented within the same library. The final modifier encompasses 
 the effects of base, and therefore any subclasses must also be marked base, final, or sealed.
-
+*/
 // Library a.dart
 final class Vehicle {
   void moveForward(int meters) {
@@ -263,16 +219,14 @@ class MockVehicle implements Vehicle {
     // ...
   }
 }
-
-
- */
+ 
 enum 
 /*
 To declare a simple enumerated type, use the enum keyword and list the values you want to be 
 enumerated:
-
+*/
 enum Color { red, green, blue }
-
+/*
 Dart also allows enum declarations to declare classes with fields, methods, and const constructors 
 which are limited to a fixed number of known constant instances.
 
@@ -294,7 +248,7 @@ Instance methods in an enhanced enum can use this to reference the current enum 
 
 Here is an example that declares an enhanced enum with multiple instances, instance variables, 
 getters, and an implemented interface:
-
+*/
 enum Vehicle implements Comparable<Vehicle> {
   car(tires: 4, passengers: 5, carbonPerKilometer: 400),
   bus(tires: 6, passengers: 50, carbonPerKilometer: 800),
@@ -318,23 +272,27 @@ enum Vehicle implements Comparable<Vehicle> {
   int compareTo(Vehicle other) => carbonFootprint - other.carbonFootprint;
 }
 
-Access the enumerated values like any other static variable:
+//Access the enumerated values like any other static variable:
 
 final favoriteColor = Color.blue;
 if (favoriteColor == Color.blue) {
   print('Your favorite color is blue!');
 }
-Each value in an enum has an index getter, which returns the zero-based position of the value in the enum declaration. For example, the first value has index 0, and the second value has index 1.
-
+/*
+Each value in an enum has an index getter, which returns the zero-based position of the value in 
+the enum declaration. For example, the first value has index 0, and the second value has index 1.
+*/
 assert(Color.red.index == 0);
 assert(Color.green.index == 1);
 assert(Color.blue.index == 2);
-To get a list of all the enumerated values, use the enum’s values constant.
+//To get a list of all the enumerated values, use the enum’s values constant.
 
 List<Color> colors = Color.values;
 assert(colors[2] == Color.blue);
-You can use enums in switch statements, and you’ll get a warning if you don’t handle all of the enum’s values:
-
+/*
+You can use enums in switch statements, and you’ll get a warning if you don’t handle all of the 
+enum’s values:
+*/
 var aColor = Color.blue;
 
 switch (aColor) {
@@ -347,15 +305,18 @@ switch (aColor) {
   default: // Without this, you see a WARNING.
     print(aColor); // 'Color.blue'
 }
-If you need to access the name of an enumerated value, such as 'blue' from Color.blue, use the .name property:
-
+/*
+If you need to access the name of an enumerated value, such as 'blue' from Color.blue, use the 
+.name property:
+*/
 print(Color.blue.name); // 'blue'
-You can access a member of an enum value like you would on a normal object:
+//You can access a member of an enum value like you would on a normal object:
 
 print(Vehicle.car.carbonFootprint);
- */
+ 
 in
-/*in is used in a for in loop to iterate over an iterable (such as a list or set).
+/*
+in is used in a for in loop to iterate over an iterable (such as a list or set).
 list es un array
 set es un array que no puede tener elementos repetidos
 void main() {
@@ -363,18 +324,20 @@ void main() {
   for (var item in myList)
     print(item);
 }
- */
+*/
 
 base
 /*
-To enforce inheritance of a class or mixin’s implementation, use the base modifier. A base class disallows implementation outside of its own library. This guarantees:
+To enforce inheritance of a class or mixin’s implementation, use the base modifier. A base class 
+disallows implementation outside of its own library. This guarantees:
 
 The base class constructor is called whenever an instance of a subtype of the class is created.
 All implemented private members exist in subtypes.
-A new implemented member in a base class does not break subtypes, since all subtypes inherit the new member.
-This is true unless the subtype already declares a member with the same name and an incompatible signature.
-You must mark any class which implements or extends a base class as base, final, or sealed. This prevents outside libraries from breaking the base class guarantees.
-
+A new implemented member in a base class does not break subtypes, since all subtypes inherit the new 
+member. This is true unless the subtype already declares a member with the same name and an 
+incompatible signature. You must mark any class which implements or extends a base class as base, 
+final, or sealed. This prevents outside libraries from breaking the base class guarantees.
+*/
 // Library a.dart
 base class Vehicle {
   void moveForward(int meters) {
@@ -393,40 +356,22 @@ base class Car extends Vehicle {
   // ...
 }
 
-// ERROR: Cannot be implemented
+// ERROR: Cannot be implemented, ASI SE EVITA QUE SE SOBREESCRIBAN LOS METODOS DE LA SUPERCLASS
 base class MockVehicle implements Vehicle {
   @override
   void moveForward() {
     // ...
   }
 }
- */
+ 
 switch default case break
-/*
-The switch keyword is used in the switch case statement, which is a simplified version of the nested 
-if-else statement.
-switch(variable_expression) { 
-   case constant_expr1: { 
-      // statements; 
-   } 
-   break; 
-  
-   case constant_expr2: { 
-      //statements; 
-   } 
-   break; 
-      
-   default: { 
-      //statements;  
-   }
-   break; 
-} 
- */
+//SAME AS JAVASCRIPT
+
 assert
 /*
 During development, use an assert statement— assert(<condition>, <optionalMessage>); —to disrupt 
 normal execution if a boolean condition is false.
-
+*/
 // Make sure the variable has a non-null value.
 assert(text != null);
 
@@ -435,18 +380,21 @@ assert(number < 100);
 
 // Make sure this is an https URL.
 assert(urlString.startsWith('https'));
-To attach a message to an assertion, add a string as the second argument to assert (optionally with a 
-trailing comma):
-
+/*
+To attach a message to an assertion, add a string as the second argument to assert (optionally with 
+a trailing comma):
+*/
 assert(urlString.startsWith('https'),
     'URL ($urlString) should start with "https".');
- */
+
 export
 /*
-The Dart ecosystem uses packages to share software such as libraries and tools. This page tells you how to create a package, with a focus on the most common kind of package, library packages.
+The Dart ecosystem uses packages to share software such as libraries and tools. This page tells you 
+how to create a package, with a focus on the most common kind of package, library packages.
 
 Creating a new package
-To create the initial directory and structure for a package, use the dart create command and the package template:
+To create the initial directory and structure for a package, use the dart create command and the 
+package template:
 
  dart create -t package <PACKAGE_NAME>
 What makes a library package
@@ -457,23 +405,39 @@ root directory contains pubspec.yaml and lib/file.dart
 The minimal requirements for a library are:
 
 pubspec file
-The pubspec.yaml file for a library is the same as for an application package—there is no special designation to indicate that the package is a library.
-lib directory
-As you might expect, the library code lives under the lib directory and is public to other packages. You can create any hierarchy under lib, as needed. By convention, implementation code is placed under lib/src. Code under lib/src is considered private; other packages should never need to import src/.... To make APIs under lib/src public, you can export lib/src files from a file that’s directly under lib.
+The pubspec.yaml file for a library is the same as for an application package—there is no special 
+designation to indicate that the package is a library. lib directory
+As you might expect, the library code lives under the lib directory and is public to other packages. 
+You can create any hierarchy under lib, as needed. By convention, implementation code is placed 
+under lib/src. Code under lib/src is considered private; other packages should never need to import 
+src/.... To make APIs under lib/src public, you can export lib/src files from a file that’s directly 
+under lib.
+
 Organizing a library package
-Library packages are easiest to maintain, extend, and test when you create small, individual libraries, referred to as mini libraries. In most cases, each class should be in its own mini library, unless you have a situation where two classes are tightly coupled.
+Library packages are easiest to maintain, extend, and test when you create small, individual 
+libraries, referred to as mini libraries. In most cases, each class should be in its own mini 
+library, unless you have a situation where two classes are tightly coupled.
 
- Note: You may have heard of the part directive, which allows you to split a library into multiple Dart files. We recommend that you avoid using part and create mini libraries instead.
+Note: You may have heard of the part directive, which allows you to split a library into multiple 
+Dart files. We recommend that you avoid using part and create mini libraries instead.
 
-Create a “main” library file directly under lib, lib/<package-name>.dart, that exports all of the public APIs. This allows the user to get all of a library’s functionality by importing a single file.
+Create a “main” library file directly under lib, lib/<package-name>.dart, that exports all of the 
+public APIs. This allows the user to get all of a library’s functionality by importing a single file.
 
-The lib directory might also include other importable, non-src, libraries. For example, perhaps your main library works across platforms, but you create separate libraries that rely on dart:io or dart:html. Some packages have separate libraries that are meant to be imported with a prefix, when the main library is not.
+The lib directory might also include other importable, non-src, libraries. For example, perhaps your 
+main library works across platforms, but you create separate libraries that rely on dart:io or 
+dart:html. Some packages have separate libraries that are meant to be imported with a prefix, when 
+the main library is not.
 
-Let’s look at the organization of a real-world library package: shelf. The shelf package provides an easy way to create web servers using Dart, and is laid out in a structure that is commonly used for Dart library packages:
+Let’s look at the organization of a real-world library package: shelf. The shelf package provides an 
+easy way to create web servers using Dart, and is laid out in a structure that is commonly used for 
+Dart library packages:
 
 shelf root directory contains example, lib, test, and tool subdirectories
 
-Directly under lib, the main library file, shelf.dart, exports API from several files in lib/src. To avoid exposing more API than intended—and to give developers an overview of the entire public API of the package—shelf.dart uses show to specify exactly which symbols to export:
+Directly under lib, the main library file, shelf.dart, exports API from several files in lib/src. To 
+avoid exposing more API than intended—and to give developers an overview of the entire public API of 
+the package—shelf.dart uses show to specify exactly which symbols to export:
 
 export 'src/cascade.dart' show Cascade;
 export 'src/handler.dart' show Handler;
@@ -487,24 +451,31 @@ export 'src/request.dart' show Request;
 export 'src/response.dart' show Response;
 export 'src/server.dart' show Server;
 export 'src/server_handler.dart' show ServerHandler;
-The shelf package also contains a mini library: shelf_io. This adapter handles HttpRequest objects from dart:io.
+The shelf package also contains a mini library: shelf_io. This adapter handles HttpRequest objects 
+from dart:io.
 
- Tip: For the best performance when developing with dartdevc, put implementation files under /lib/src, instead of elsewhere under /lib. Also, avoid imports of package:package_name/src/....
+ Tip: For the best performance when developing with dartdevc, put implementation files under 
+ /lib/src, instead of elsewhere under /lib. Also, avoid imports of package:package_name/src/....
 
 Importing library files
-When importing a library file from another package, use the package: directive to specify the URI of that file.
+When importing a library file from another package, use the package: directive to specify the URI of 
+that file.
 
 import 'package:utilities/utilities.dart';
-When importing a library file from your own package, use a relative path when both files are inside of lib, or when both files are outside of lib. Use package: when the imported file is in lib and the importer is outside.
+When importing a library file from your own package, use a relative path when both files are inside 
+of lib, or when both files are outside of lib. Use package: when the imported file is in lib and the 
+importer is outside.
 
 The following graphic shows how to import lib/foo/a.dart from both lib and web.
 
 lib/bar/b.dart uses a relative import; web/main.dart uses a package import
 
 Conditionally importing and exporting library files
-If your library supports multiple platforms, then you might need to conditionally import or export library files. A common use case is a library that supports both web and native platforms.
+If your library supports multiple platforms, then you might need to conditionally import or export 
+library files. A common use case is a library that supports both web and native platforms.
 
-To conditionally import or export, you need to check for the presence of dart:* libraries. Here’s an example of conditional export code that checks for the presence of dart:io and dart:html:
+To conditionally import or export, you need to check for the presence of dart:* libraries. Here’s an 
+example of conditional export code that checks for the presence of dart:io and dart:html:
 
 export 'src/hw_none.dart' // Stub implementation
     if (dart.library.io) 'src/hw_io.dart' // dart:io implementation
@@ -517,9 +488,11 @@ In an app that can use dart:html (a web app), export src/hw_html.dart.
 Otherwise, export src/hw_none.dart.
 To conditionally import a file, use the same code as above, but change export to import.
 
- Note: The conditional import or export checks only whether the library is available for use on the current platform, not whether it’s actually imported or used.
+ Note: The conditional import or export checks only whether the library is available for use on the 
+ current platform, not whether it’s actually imported or used.
 
-All of the conditionally exported libraries must implement the same API. For example, here’s the dart:io implementation:
+All of the conditionally exported libraries must implement the same API. For example, here’s the 
+dart:io implementation:
 
 import 'dart:io';
 
@@ -543,18 +516,27 @@ void main() {
   print(message);
 }
 Providing additional files
-A well-designed library package is easy to test. We recommend that you write tests using the test package, placing the test code in the test directory at the top of the package.
+A well-designed library package is easy to test. We recommend that you write tests using the test 
+package, placing the test code in the test directory at the top of the package.
 
-If you create any command-line tools intended for public consumption, place those in the bin directory, which is public. Enable running a tool from the command line, using dart pub global activate. Listing the tool in the executables section of the pubspec allows a user to run it directly without calling dart pub global run.
+If you create any command-line tools intended for public consumption, place those in the bin 
+directory, which is public. Enable running a tool from the command line, using dart pub global 
+activate. Listing the tool in the executables section of the pubspec allows a user to run it 
+directly without calling dart pub global run.
 
-It’s helpful if you include an example of how to use your library. This goes into the example directory at the top of the package.
+It’s helpful if you include an example of how to use your library. This goes into the example 
+directory at the top of the package.
 
-Any tools or executables that you create during development that aren’t for public use go into the tool directory.
+Any tools or executables that you create during development that aren’t for public use go into the 
+tool directory.
 
-Other files that are required if you publish your library to the pub.dev site, such as README.md and CHANGELOG.md, are described in Publishing a package. For more information on how to organize a package directory, see the pub package layout conventions.
+Other files that are required if you publish your library to the pub.dev site, such as README.md and 
+CHANGELOG.md, are described in Publishing a package. For more information on how to organize a 
+package directory, see the pub package layout conventions.
 
 Documenting a library
-You can generate API docs for your library using the dart doc tool. dart doc parses the source looking for documentation comments, which use the /// syntax:
+You can generate API docs for your library using the dart doc tool. dart doc parses the source 
+looking for documentation comments, which use the /// syntax:
 
 /// The event handler responsible for updating the badge in the UI.
 void updateBadge() {
@@ -562,26 +544,36 @@ void updateBadge() {
 }
 For an example of generated docs, see the shelf documentation.
 
-To include any library-level documentation in the generated docs, add a library directive and attach the comment directly above it. For the how-and-why of documenting libraries, see Effective Dart: Documentation.
+To include any library-level documentation in the generated docs, add a library directive and 
+attach the comment directly above it. For the how-and-why of documenting libraries, see Effective 
+Dart: Documentation.
 
 Distributing an open source library
-If your library is open source, we recommend sharing it on the pub.dev site. To publish or update the library, use pub publish, which uploads your package and creates or updates its page. For example, see the page for the shelf package. See Publishing a package for details on how to prepare your package for publishing.
+If your library is open source, we recommend sharing it on the pub.dev site. To publish or update 
+the library, use pub publish, which uploads your package and creates or updates its page. For 
+example, see the page for the shelf package. See Publishing a package for details on how to prepare 
+your package for publishing.
 
-The pub.dev site not only hosts your package, but also generates and hosts your package’s API reference docs. A link to the latest generated docs is in the package’s About box; for example, see the shelf package’s API docs. Links to previous versions’ docs are in the Versions tab of the package’s page.
+The pub.dev site not only hosts your package, but also generates and hosts your package’s API 
+reference docs. A link to the latest generated docs is in the package’s About box; for example, 
+see the shelf package’s API docs. Links to previous versions’ docs are in the Versions tab of the 
+package’s page.
 
 To ensure that your package’s API docs look good on the pub.dev site, follow these steps:
 
-Before publishing your package, run the dart doc tool to make sure that your docs generate successfully and look as expected.
-After publishing your package, check the Versions tab to make sure that the docs generated successfully.
-If the docs didn’t generate at all, click failed in the Versions tab to see the dart doc output.
+Before publishing your package, run the dart doc tool to make sure that your docs generate 
+successfully and look as expected. After publishing your package, check the Versions tab to make 
+sure that the docs generated successfully. If the docs didn’t generate at all, click failed in the 
+Versions tab to see the dart doc output.
 */
 interface
 /*
-interface
-To define an interface, use the interface modifier. Libraries outside of the interface’s own defining library can implement the interface, but not extend it. This guarantees:
+To define an interface, use the interface modifier. Libraries outside of the interface’s own 
+defining library can implement the interface, but not extend it. This guarantees:
 
 When one of the class’s instance methods calls another instance method on this, it will always invoke a known implementation of the method from the same library.
 Other libraries can’t override methods that the interface class’s own methods might later call in unexpected ways. This reduces the fragile base class problem.
+*/
 // Library a.dart
 interface class Vehicle {
   void moveForward(int meters) {
@@ -607,32 +599,36 @@ class MockVehicle implements Vehicle {
     // ...
   }
 }
-
+/*
 The most common use for the interface modifier is to define a pure interface. Combine the interface 
 and abstract modifiers for an abstract interface class.
 
-Like an interface class, other libraries can implement, but cannot inherit, a pure interface. Like an
-abstract class, a pure interface can have abstract members.
+Like an interface class, other libraries can implement, but cannot inherit, a pure interface. Like 
+an abstract class, a pure interface can have abstract members.
  */
 sync yield
 /*
-When you need to lazily produce a sequence of values, consider using a generator function. Dart has built-in support for two kinds of generator functions:
+When you need to lazily produce a sequence of values, consider using a generator function. Dart has 
+built-in support for two kinds of generator functions:
 
 Synchronous generator: Returns an Iterable object.
 Asynchronous generator: Returns a Stream object.
-To implement a synchronous generator function, mark the function body as sync*, and use yield statements to deliver values:
-
+To implement a synchronous generator function, mark the function body as sync*, and use yield 
+statements to deliver values:
+*/
 Iterable<int> naturalsTo(int n) sync* {
   int k = 0;
   while (k < n) yield k++;
 }
-To implement an asynchronous generator function, mark the function body as async*, and use yield statements to deliver values:
-
+/*
+To implement an asynchronous generator function, mark the function body as async*, and use yield 
+statements to deliver values:
+*/
 Stream<int> asynchronousNaturalsTo(int n) async* {
   int k = 0;
   while (k < n) yield k++;
 }
-If your generator is recursive, you can improve its performance by using yield*:
+//If your generator is recursive, you can improve its performance by using yield*:
 
 Iterable<int> naturalsDownFrom(int n) sync* {
   if (n > 0) {
@@ -640,12 +636,9 @@ Iterable<int> naturalsDownFrom(int n) sync* {
     yield* naturalsDownFrom(n - 1);
   }
 }
-*/
-async await
-/*
-idem javascript
-*/
-extend
+
+
+
 sealed
 /*
 To create a known, enumerable set of subtypes, use the sealed modifier. This allows you to create a 
@@ -863,7 +856,8 @@ You can also throw arbitrary objects:
 throw 'Out of llamas!';
  Note: Production-quality code usually throws types that implement Error or Exception.
 
-Because throwing an exception is an expression, you can throw exceptions in => statements, as well as anywhere else that allows expressions:
+Because throwing an exception is an expression, you can throw exceptions in => statements, as well 
+as anywhere else that allows expressions:
 
 void distanceTo(Point other) => throw UnimplementedError();
 */
@@ -1006,7 +1000,8 @@ its class. For example, a factory constructor might return an instance from a ca
 return an instance of a subtype. Another use case for factory constructors is initializing a final 
 variable using logic that can’t be handled in the initializer list.
 
-In the following example, the Logger factory constructor returns objects from a cache, and the Logger.fromJson factory constructor initializes a final variable from a JSON object.
+In the following example, the Logger factory constructor returns objects from a cache, and the 
+Logger.fromJson factory constructor initializes a final variable from a JSON object.
 
 class Logger {
   final String name;
@@ -1040,11 +1035,6 @@ var logMap = {'name': 'UI'};
 var loggerJson = Logger.fromJson(logMap);
 
 */
-new
-/*
-inicia nuevos objetos o clases, similar a javascript
-*/
-
 
 class
 /*
@@ -1068,26 +1058,23 @@ exclusive:
 
 abstract with sealed. A sealed class is always implicitly abstract.
 interface, final or sealed with mixin. These access modifiers prevent mixing in.
-
-
 */
-
-
-
-
-
 null
 /*
-Uninitialized variables that have a nullable type have an initial value of null. Even variables with numeric types are initially null, because numbers—like everything else in Dart—are objects.
+Uninitialized variables that have a nullable type have an initial value of null. Even variables with 
+numeric types are initially null, because numbers—like everything else in Dart—are objects.
 
 int? lineCount;
 assert(lineCount == null);
- Note: Production code ignores the assert() call. During development, on the other hand, assert(condition) throws an exception if condition is false. For details, check out Assert.
+ Note: Production code ignores the assert() call. During development, on the other hand, 
+ assert(condition) throws an exception if condition is false. For details, check out Assert.
 
 With null safety, you must initialize the values of non-nullable variables before you use them:
 
 int lineCount = 0;
-You don’t have to initialize a local variable where it’s declared, but you do need to assign it a value before it’s used. For example, the following code is valid because Dart can detect that lineCount is non-null by the time it’s passed to print():
+You don’t have to initialize a local variable where it’s declared, but you do need to assign it a 
+value before it’s used. For example, the following code is valid because Dart can detect that 
+lineCount is non-null by the time it’s passed to print():
 
 int lineCount;
 
@@ -1098,7 +1085,8 @@ if (weLikeToCount) {
 }
 
 print(lineCount);
-Top-level and class variables are lazily initialized; the initialization code runs the first time the variable is used.
+Top-level and class variables are lazily initialized; the initialization code runs the first time 
+the variable is used.
 */
 typedef
 /*
@@ -1106,7 +1094,8 @@ definicion de tipados
 typedef IntList = List<int>;
 IntList il = [1, 2, 3];
 
-We recommend using inline function types instead of typedefs for functions, in most situations. However, function typedefs can still be useful:
+We recommend using inline function types instead of typedefs for functions, in most situations. 
+However, function typedefs can still be useful:
 
 typedef Compare<T> = int Function(T a, T b);
 
@@ -1118,30 +1107,22 @@ void main() {
 */
 
 var
-/*
-define variables
-*/
+//define variables
 
 
-finally catch try on rethrow
-/*The finally is an optional block of the try-catch statement. The finally block always executes 
-whether an exception occurs or not. 
 
-try {
-    // place the code that may cause exceptions
-} catch(e) {
-   // place the code that handles the exception
-} finally {
-   // place the code that clean up the resource
-}
-Catching, or capturing, an exception stops the exception from propagating (unless you rethrow the exception). Catching an exception gives you a chance to handle it:
+on rethrow
 
 try {
   breedMoreLlamas();
 } on OutOfLlamasException {
   buyMoreLlamas();
 }
-To handle code that can throw more than one type of exception, you can specify multiple catch clauses. The first catch clause that matches the thrown object’s type handles the exception. If the catch clause does not specify a type, that clause can handle any type of thrown object:
+/*
+To handle code that can throw more than one type of exception, you can specify multiple catch 
+clauses. The first catch clause that matches the thrown object’s type handles the exception. 
+If the catch clause does not specify a type, that clause can handle any type of thrown object:
+*/
 
 try {
   breedMoreLlamas();
@@ -1155,10 +1136,13 @@ try {
   // No specified type, handles all
   print('Something really unknown: $e');
 }
-As the preceding code shows, you can use either on or catch or both. Use on when you need to specify the exception type. Use catch when your exception handler needs the exception object.
+/*
+As the preceding code shows, you can use either on or catch or both. Use on when you need to specify 
+the exception type. Use catch when your exception handler needs the exception object.
 
-You can specify one or two parameters to catch(). The first is the exception that was thrown, and the second is the stack trace (a StackTrace object).
-
+You can specify one or two parameters to catch(). The first is the exception that was thrown, and 
+the second is the stack trace (a StackTrace object).
+*/
 try {
   // ···
 } on Exception catch (e) {
@@ -1167,7 +1151,7 @@ try {
   print('Exception details:\n $e');
   print('Stack trace:\n $s');
 }
-To partially handle an exception, while allowing it to propagate, use the rethrow keyword.
+//To partially handle an exception, while allowing it to propagate, use the rethrow keyword.
 
 void misbehave() {
   try {
@@ -1186,11 +1170,9 @@ void main() {
     print('main() finished handling ${e.runtimeType}.');
   }
 }
-*/
+
 operator
-/*
-son los operadores condicionales como < > + etc
-*/
+//son los operadores condicionales como < > + etc
 void
 /*
 Indicates that a value is never used. Often used as a return type.
@@ -1201,25 +1183,16 @@ void main() {
   print('The last character: ${hi.characters.last}');
 }
 */
-continue
-/*
-used in loops, same as javascript
- */
 
-for
-/*
-IDEM JAVASCRIPT
-*/
+
+for continue async await extends else if true false while finally catch try new function
+//IDEM JAVASCRIPT, new INSTANCIA NUEVOS OBJETOS
 part
 /*
  Note: You may have heard of the part directive, which allows you to split a library into multiple 
  Dart files. We recommend that you avoid using part and create mini libraries instead.
  VER export KEYWORD PARA MAS INFORMACION
 
- */
-while
-/*
-idem javascript
  */
 covariant     
 /*
@@ -1244,20 +1217,11 @@ Although this example shows using covariant in the subtype, the covariant keywor
 either the superclass or the subclass method. Usually the superclass method is the best place to put 
 it. The covariant keyword applies to a single parameter and is also supported on setters and fields.
 */
-function
-/*
-Dart is a true object-oriented language, so even functions are objects and have a type, Function. 
-This means that functions can be assigned to variables or passed as arguments to other functions
 
-SAME AS JAVASCRIPT
-*/
 
-with
 
-extends
-/* 
-same as javascript
-*/
+
+
 
 get set
 /*
@@ -1316,12 +1280,6 @@ void main() {
 }
 */
 
-
-
-
-
-
-
 do
 /*
 do while
@@ -1329,7 +1287,6 @@ do {
   printLine();
 } while (!atEndOfPage());
 */
-
 
 dynamic
 /*
