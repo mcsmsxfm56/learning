@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());//entry point de la app
-  //la funcion main lo unico que hace es indicar que se debe ejecutar el widget myapp
-  //todo son widgets en vez de componentes, hasta la app es un widget
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
-  //aca se setea la landing page(home widget), el titulo, el estado de la app, define el tema visual
-  //de la app
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DeliveryApp',//nombre de la app
+      title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -35,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'DeliveryApp homepage'),//titulo que aparece en la app
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -107,7 +103,6 @@ class _MyHomePageState extends State<MyHomePage> {
           // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
-          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
@@ -117,15 +112,6 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            //dentro de childen van todos los componentes/widgets de la columna
-            //aca agregue un boton de registro que cuando se presiona imprime button pressed
-            //en la consola del pc
-            ElevatedButton(
-            onPressed: () {
-              print('button pressed!');
-            },
-            child: Text('Registrarse'),
-          )
           ],
         ),
       ),
