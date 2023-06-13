@@ -29,7 +29,7 @@ String 3invalido = "invalido"
 
 
 */
-
+/* 
 void main()
 {
     // Declaring and initialising a variable
@@ -77,3 +77,4 @@ If the value you have is computed at runtime (new DateTime.now(), for example), 
 Final:
 final should be used over const if you don't know the value at compile time, and it will be calculated/grabbed at runtime. If you want an HTTP response that can't be changed, if you want to get something from a database, or if you want to read from a local file, use final. Anything that isn't known at compile time should be final over const.
  */
+*/

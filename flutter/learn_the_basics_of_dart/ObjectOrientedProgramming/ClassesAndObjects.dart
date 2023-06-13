@@ -11,7 +11,7 @@ object_name.property_name;
 
 // For accessing the method
 object_name.method_name();
-*/
+
 
 // Creating Class named Gfg
 class Gfg {
@@ -38,3 +38,4 @@ void main()
     // Calling function name geek using object of the class Gfg
     geek.geek();//Welcome to GeeksforGeeks
 }
+*/

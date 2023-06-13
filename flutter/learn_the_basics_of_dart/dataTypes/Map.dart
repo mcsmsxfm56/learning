@@ -1,3 +1,4 @@
+/* 
 void main() { 
   // Creating Map using is literals
   var gfg = {'position1' : 'Geek', 'position2' : 'for', 'position3' : 'Geeks'};
@@ -45,3 +46,4 @@ void main() {
 
   
 }
+*/

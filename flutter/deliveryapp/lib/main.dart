@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());//entry point de la app
+  runApp(const MyApp()); //entry point de la app
   //la funcion main lo unico que hace es indicar que se debe ejecutar el widget myapp
   //todo son widgets en vez de componentes, hasta la app es un widget
 }
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DeliveryApp',//nombre de la app
+      title: 'DeliveryApp', //nombre de la app
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'DeliveryApp homepage'),//titulo que aparece en la app
+      home: const MyHomePage(
+          title: 'DeliveryApp homepage'), //titulo que aparece en la app
     );
   }
 }
@@ -107,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
-          
+
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
@@ -121,11 +122,11 @@ class _MyHomePageState extends State<MyHomePage> {
             //aca agregue un boton de registro que cuando se presiona imprime button pressed
             //en la consola del pc
             ElevatedButton(
-            onPressed: () {
-              print('button pressed!');
-            },
-            child: Text('Registrarse'),
-          )
+              onPressed: () {
+                //print('button pressed!');
+              },
+              child: const Text('Registrarse'),
+            )
           ],
         ),
       ),

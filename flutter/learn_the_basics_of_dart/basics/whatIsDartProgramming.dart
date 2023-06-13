@@ -1,3 +1,4 @@
+/* 
 void main() { //se declara funcion  main
   for (int i = 0; i < 5; i++) { //bucle for, se declara la variable i con tipado integer
   //i sera igual a 0, 1, 2, 3, 4
@@ -123,3 +124,4 @@ void main() {
   print(myMob.musicPlay());  
   print(myMob.clickPicture());  
 }  
+*/

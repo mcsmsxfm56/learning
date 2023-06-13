@@ -1,4 +1,5 @@
 /*
+/* 
 Types of List
 There are broadly two types of lists on the basis of their length:  
 
@@ -69,4 +70,4 @@ ESTOS DOS TIPOS DE LISTA SON LISTAS DE UNA DIMENSION
     print(gfg);
     //[[[0, 1, 2], [1, 2, 3], [2, 3, 4]], [[1, 2, 3], [2, 3, 4], [3, 4, 5]], [[2, 3, 4], [3, 4, 5], [4, 5, 6]]]
 }
-
+*/

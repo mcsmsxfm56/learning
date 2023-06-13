@@ -2,6 +2,7 @@
 // elements from the enum data class
  
 // Creating enum with name Gfg
+/* 
 enum Gfg {
    
   // Inserting data
@@ -25,3 +26,4 @@ void main() {
     break;
   }
 }
+*/

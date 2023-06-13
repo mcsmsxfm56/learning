@@ -1,6 +1,7 @@
 // Dart Program to create a constructor
   
 // Creating Class named Gfg
+/* 
 class Gfg{
     
   // Creating Constructor
@@ -137,3 +138,4 @@ This is the parameterized constructor with only one parameter
 This is the parameterized constructor with two parameters
 Value of a + b is 5
  */
+*/

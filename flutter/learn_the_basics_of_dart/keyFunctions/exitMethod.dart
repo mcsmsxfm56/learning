@@ -1,5 +1,5 @@
 //Example: Using the exit() method to exit the program abruptly.
-
+/* 
 // Importing the packages
 import 'dart:io';
   
@@ -15,3 +15,4 @@ void main() {
   // This will not be printed
   print("Good Bye GeeksForGeeks");
 }
+*/

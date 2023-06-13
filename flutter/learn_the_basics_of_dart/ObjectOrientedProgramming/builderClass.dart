@@ -98,7 +98,7 @@ The error occurs because we are building the Scaffold at the same time we are ca
 To correct this error we can wrap the Gesture detector with a Builder widget as following. In this case, the context is being passed to the SnackBar widget through the Builder. The SnackBar becomes the child of the Scaffold context being passed.  Now if click on the button It gives the desired output as the Scaffold is already present for the SnackBar to appear.
  */
 
-
+/* 
 import 'package:flutter/material.dart';
   
 void main() {
@@ -163,3 +163,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+*/

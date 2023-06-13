@@ -1,3 +1,4 @@
+/* 
 main() {
     //en dart la funcion main sirve como entry point
     print("Welcome to GeeksForGeeks");
@@ -53,6 +54,4 @@ int main() //variable con retorno integer, en las funciones el retorno tiene tip
   print(checkEven(n));
   return 0;
 }
-
-
-
+*/

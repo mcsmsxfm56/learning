@@ -1,4 +1,4 @@
-
+/* 
 int add(int a, int b)
 {
     // Creating function
@@ -102,3 +102,4 @@ void main()
 {
     gfg(); // Calling Lambda function
 }
+*/
