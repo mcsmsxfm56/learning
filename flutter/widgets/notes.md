@@ -21,3 +21,11 @@ Consider refactoring the stateless widget into a stateful widget so that it can 
 If the widget is likely to get rebuilt frequently due to the use of InheritedWidgets, consider refactoring the stateless widget into multiple widgets, with the parts of the tree that change being pushed to the leaves. For example instead of building a tree with four widgets, the inner-most widget depending on the Theme, consider factoring out the part of the build function that builds the inner-most widget into its own widget, so that only the inner-most widget needs to be rebuilt when the theme changes.
 
 When trying to create a reusable piece of UI, prefer using a widget rather than a helper method. For example, if there was a function used to build a widget, a State.setState call would require Flutter to entirely rebuild the returned wrapping widget. If a Widget was used instead, Flutter would be able to efficiently re-render only those parts that really need to be updated. Even better, if the created widget is const, Flutter would short-circuit most of the rebuild work.
+
+# MEDIA QUERY
+
+1. https://api.flutter.dev/flutter/widgets/MediaQuery-class.html
+
+# ESTILADO
+
+1. https://www.youtube.com/watch?v=kcq8AbVyMbk

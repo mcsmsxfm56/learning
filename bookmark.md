@@ -19,4 +19,13 @@
    1. Instead of being linearly oriented (either horizontally or vertically), a Stack widget lets you place widgets on top of each other in paint order. You can then use the Positioned widget on children of a Stack to position them relative to the top, right, bottom, or left edge of the stack. Stacks are based on the web’s absolute positioning layout model.
 4. Container
    1. The Container widget lets you create a rectangular visual element. A container can be decorated with a BoxDecoration, such as a background, a border, or a shadow. A Container can also have margins, padding, and constraints applied to its size. In addition, a Container can be transformed in three dimensional space using a matrix.
+
+## TENER EN CUENTA EN PROYECTO PRACTICO
+
 5. https://docs.flutter.dev/reference/widgets (TODOS LOS WIDGETS)
+   1. https://docs.flutter.dev/ui/widgets
+6. https://docs.flutter.dev/ui/widgets/material (MATERIAL WIDGETS, USARLOS EN MI PRIMER PROYECTO FLUTTER)
+7. CUPERTINO WIDGETS (IOS STYLE WIDGETS)
+   1. https://blog.logrocket.com/flutter-cupertino-tutorial-build-ios-apps-native/
+   2. https://www.youtube.com/watch?v=L-TY_5NZ7z4
+   3. https://docs.flutter.dev/ui/widgets/cupertino
